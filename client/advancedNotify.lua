@@ -5,7 +5,8 @@ UI.AdvancedNotify = function(data)
   end
 
   SendNUIMessage({
-    type = 'advNotify',
+    action = 'advNotify',
+    type = data.type,
     title = data.title,
     description = data.description,
     content = data.content,
