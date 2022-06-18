@@ -18,7 +18,7 @@ local function startCarhud(vehicle)
 				SendNUIMessage({
 					action = 'carhudData',
 					on = IsVehicleEngineOn(vehicle),
-					speed = speed * MULTIPLIER,
+					speed = math.floor(speed * MULTIPLIER),
 					rpm = speed and rpm == 0 and 'R' or speed == 0 and 'N' or rpm,
 					fuel = fuel,
 					headlight = headlight
